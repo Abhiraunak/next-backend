@@ -7,16 +7,18 @@ export async function GET() {
     return Response.json({ name: user?.email, email: user?.email })
 }
 
-export async function POST(req: NextRequest){
+export async function POST(req: NextRequest) {
+    // extract the body
     const body = await req.json();
-    const user = await client.user.create({
-        data : {
-            email : body.email,
-            password : body.password
+    await client.user.create({
+        data: {
+            email: body.email,
+            password: body.password
         }
     })
-    console.log(user.id);
 
-    return NextResponse.json({ message: "Signed up" });
+    return Response.json({
+        message: "You are logged in!"
+    })
 }
 
