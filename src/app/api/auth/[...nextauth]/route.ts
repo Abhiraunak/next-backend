@@ -13,18 +13,20 @@ const handler = NextAuth({
                 username: { label: 'Email', type: 'text', placeholder: 'Email' },
                 password: { label: 'Password', type: 'password', placeholder: 'Password' }
             },
-            async authorize(credentials: any) {
-                const username = credentials.username;
-                const password = credentials.password;
-                const user = await prisma.user.findUnique({
-                    where : {
-                        email : username,
-                        password : password
-                    }
-                })
+            async authorize() {
+                // const username = credentials.username;
+                // const password = credentials.password;
+                // const user = await prisma.user.findUnique({
+                //     where : {
+                //         email : username,
+                //         password : password
+                //     }
+                // })
             
                 return {
-                    id: "user1"
+                    id: "user1",
+                    name: "Abhishek",
+                    email: "abhishek@gmail.com"
                 };
             },
         })
