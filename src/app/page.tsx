@@ -16,7 +16,7 @@ export default async function Home() {
     <div className="flex flex-col justify-center h-screen bg-zinc-700">
       <div className="max-w-screen-xl mx-auto ">
         <div className="px-10 py-4 rounded-full bg-zinc-400 text-zinc-600">
-          {userData.username}
+          {userData.email}
         </div>
         <div className="mt-10 px-20 py-4 rounded-full bg-zinc-400 text-zinc-600">
           {userData.email}
