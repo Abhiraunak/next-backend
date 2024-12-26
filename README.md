@@ -2,8 +2,8 @@ This repository is a practice project focusing on backend development using Next
 
 
 🛠️ Technologies Used <br>
-Next.js: Framework for server-side rendering and API routes.
-Node.js: Backend runtime environment.
-Prisma: ORM for Database(postgres) for persisting data.
-JWT: For user authentication.
-TypeScript: Static typing for maintainable code.
+  Next.js: Framework for server-side rendering and API routes.<br>
+  Node.js: Backend runtime environment.<br>
+  Prisma: ORM for Database(postgres) for persisting data.<br>
+  JWT: For user authentication.<br>
+  TypeScript: Static typing for maintainable code.
