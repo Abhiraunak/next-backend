@@ -2,7 +2,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 
 export function Appbar() {
-    const session = useSession
+    const session = useSession();
     return (
         <>
             <div className="flex justify-between p-4 bg-current">
@@ -19,7 +19,7 @@ export function Appbar() {
                     }}
                 >Sign out</button>
             </div>
-            <div className="max-w-screen-xl mx-auto mt-44 text-blue-200">
+            <div className="max-w-screen-xl mx-auto mt-4">
                 {JSON.stringify(session)}
             </div>
         </>

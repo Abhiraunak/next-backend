@@ -1,10 +1,18 @@
 import { PrismaClient } from "@prisma/client";
+import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 const client = new PrismaClient();
 
-export async function GET() {
-    const user = await client.user.findFirst({});
-    return Response.json({ name: user?.email, password: user?.password })
+// export async function GET() {
+//     const user = await client.user.findFirst({});
+//     return Response.json({ name: user?.email, password: user?.password })
+// }
+
+export async function GET(){
+    const session = await getServerSession();
+    return NextResponse.json({
+        session
+    })
 }
 
 export async function POST(req: NextRequest) {
